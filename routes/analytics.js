@@ -1,11 +1,11 @@
 // Description: Route to get analytics for a specific shortened URL
 const express = require('express');
-const auth = require('../middleware/auth');
+const auth = require('../middlewares/auth');
 const Url = require('../models/Url');
 
 const router = express.Router();
 
-router.get('/analytics/:shortUrl', auth, async (req, res) => {
+router.get('/:shortUrl', auth, async (req, res) => {
   try {
     const url = await Url.findOne({ shortUrl: req.params.shortUrl, userId: req.user.id });
 
