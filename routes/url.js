@@ -6,7 +6,7 @@ const Url = require('../models/Url');
 const router = express.Router();
 
 router.post('/shorten', async (req, res) => {
-    const { originalUrl } = req.body;
+    const { originalUrl, expiresAt } = req.body;
     if (!originalUrl){
         return res.status(400).json({ error : 'Original URL is required' });
     }
@@ -18,12 +18,13 @@ router.post('/shorten', async (req, res) => {
         }
 
         const shortUrl = nanoid(8);
-        url = new Url({
+        const newUrl = new Url({
             originalUrl,
             shortUrl,
+            expiresAt: expiresAt ? new Date(expiresAt) : null,
         });
-        await url.save();
-        res.json(url);
+        await newUrl.save();
+        res.json(newUrl);
     }catch(err){
         res.status(500).json({ error: 'Server error' });
 
