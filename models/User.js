@@ -1,3 +1,4 @@
+// This file defines the User model for a MongoDB database using Mongoose.
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 

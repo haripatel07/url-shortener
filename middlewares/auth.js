@@ -1,3 +1,4 @@
+// This middleware checks for a valid JWT token in the request header
 const jwt = require('jsonwebtoken');
 
 module.exports = function (req, res, next) {

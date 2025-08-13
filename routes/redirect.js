@@ -1,4 +1,4 @@
-// Redirect route for short URLs
+// This file handles the redirection logic for short URLs.
 const express = require('express');
 const Url = require('../models/Url');
 const geoip = require('geoip-lite');

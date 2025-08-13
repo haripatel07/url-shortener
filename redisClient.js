@@ -1,3 +1,4 @@
+// This file sets up a Redis client using the redis package and dotenv for environment variables.
 const redis = require('redis');
 const dotenv = require('dotenv');
 
