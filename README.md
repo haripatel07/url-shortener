@@ -2,7 +2,7 @@
 
 This is a full-featured URL shortener back-end application built with Node.js and Express.js. It allows users to create short, unique links that redirect to long URLs. The project demonstrates essential back-end concepts such as API design, database operations, and user authentication, making it a robust portfolio piece.
 
-**Live Demo**: [https://url-shortener-l4wb.onrender.com](https://url-shortener-l4wb.onrender.com)
+#### **Live Demo**: [https://url-shortener-l4wb.onrender.com](https://url-shortener-l4wb.onrender.com)
 -----
 
 ### Key Features
@@ -86,25 +86,25 @@ All API endpoints are prefixed with `/api/v1`.
   * `POST /api/v1/auth/register`
 
       * **Description**: Creates a new user account.
-      * **Body**: `{ "username": "testuser", "password": "testpassword" }`
+      * **Body**: `{ "username": "test", "password": "password" }`
 
   * `POST /api/v1/auth/login`
 
       * **Description**: Authenticates a user and returns a JWT.
-      * **Body**: `{ "username": "testuser", "password": "testpassword" }`
+      * **Body**: `{ "username": "test", "password": "password" }`
 
 #### **URL Shortening (Protected)**
 
   * `POST /api/v1/url/shorten`
       * **Description**: Creates a new short URL. Requires a valid JWT.
       * **Headers**: `x-auth-token: <your-jwt>`
-      * **Body**: `{ "originalUrl": "https://www.google.com" }`
+      * **Body**: `{ "originalUrl": "https://www.nodejs.org" }`
 
 #### **URL Redirection**
 
   * `GET /<shortUrl>`
       * **Description**: Redirects to the original URL.
-      * **Example**: `GET http://localhost:3000/hUQDDGwg`
+      * **Example**: `GET http://localhost:3000/KlrbFg8E`
 
 #### **Analytics (Protected)**
 
@@ -124,6 +124,7 @@ All API endpoints are prefixed with `/api/v1`.
 │   └── Url.js
 ├── /public
 │   └── index.html
+├── /pictures
 ├── /routes
 │   ├── analytics.js
 │   ├── auth.js
