@@ -2,6 +2,7 @@
 
 This is a full-featured URL shortener back-end application built with Node.js and Express.js. It allows users to create short, unique links that redirect to long URLs. The project demonstrates essential back-end concepts such as API design, database operations, and user authentication, making it a robust portfolio piece.
 
+**Live Demo**: [https://url-shortener-l4wb.onrender.com](https://url-shortener-l4wb.onrender.com)
 -----
 
 ### Key Features
@@ -26,6 +27,20 @@ This is a full-featured URL shortener back-end application built with Node.js an
   * **bcrypt**: A library for hashing user passwords securely.
 
 -----
+
+### Screenshots
+#### Postman
+### Register API Test
+![Register Example](./pictures/register_route.png)  
+
+### Login API Test  
+![Login Example](./pictures/login_route.png)  
+
+### URL Shortening API Test  
+![Shorten URL Example](./pictures/shorten_route.png)  
+
+### Analytics Response  
+![Analytics Example](./pictures/analytics_route.png)  
 
 ### Setup and Installation
 
